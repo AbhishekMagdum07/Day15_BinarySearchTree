@@ -29,11 +29,22 @@ public class BinarySearchTree {
         }
         return root;
     }
+    // UC2 = Check if all are added with using size method in Binary Tree.
+    public static void inOrder(Node root) { // Checking our nodes are in right position or not by inorder method.
+        if (root == null) {
+            return;
+        }
+
+        inOrder(root.left);
+        System.out.print(root.data + " ");
+        inOrder(root.right);
+    }
 
     public static void main(String[] args) {
         insertNode(56);
         insertNode(30);
         insertNode(70);
+        inOrder(root);
     }
 
 }
